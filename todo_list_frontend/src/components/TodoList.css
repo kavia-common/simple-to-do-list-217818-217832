@@ -1,0 +1,56 @@
+/* TodoList Component Styles */
+.todo-list {
+  max-height: 500px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 5px;
+}
+
+/* Custom Scrollbar - Retro Style */
+.todo-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+  background: var(--retro-cream);
+  border: 2px solid var(--retro-border);
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+  background: var(--retro-burnt-orange);
+  border: 2px solid var(--retro-border);
+}
+
+.todo-list::-webkit-scrollbar-thumb:hover {
+  background: var(--retro-amber);
+}
+
+/* Empty State */
+.todo-list-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+  border: 3px dashed var(--retro-gray);
+  margin-bottom: 20px;
+}
+
+.todo-list-empty p {
+  font-size: 18px;
+  color: var(--retro-gray);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-list {
+    max-height: 400px;
+  }
+
+  .todo-list-empty {
+    padding: 40px 15px;
+  }
+
+  .todo-list-empty p {
+    font-size: 16px;
+  }
+}

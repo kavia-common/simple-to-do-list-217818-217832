@@ -1,0 +1,63 @@
+/* TodoFilter Component Styles */
+.todo-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border: 2px solid var(--retro-border);
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--retro-gray);
+  color: #FFFFFF;
+  border: 2px solid var(--retro-border);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px rgba(45, 27, 0, 0.2);
+}
+
+.filter-btn:hover {
+  background-color: var(--retro-amber);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0px rgba(45, 27, 0, 0.3);
+}
+
+.filter-btn:active {
+  transform: translateY(0);
+  box-shadow: 1px 1px 0px rgba(45, 27, 0, 0.2);
+}
+
+.filter-btn.active {
+  background-color: var(--retro-burnt-orange);
+  color: #FFFFFF;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+}
+
+.filter-btn.active:hover {
+  background-color: var(--retro-burnt-orange);
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .todo-filter {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}

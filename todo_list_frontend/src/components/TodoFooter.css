@@ -1,0 +1,84 @@
+/* TodoFooter Component Styles */
+.todo-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: #FFFFFF;
+  border: 2px solid var(--retro-border);
+  margin-top: 20px;
+}
+
+/* Task Counts */
+.task-counts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--retro-dark-brown);
+  flex-wrap: wrap;
+}
+
+.count-item {
+  display: inline-block;
+}
+
+.count-item strong {
+  color: var(--retro-burnt-orange);
+  font-size: 16px;
+}
+
+.count-divider {
+  color: var(--retro-gray);
+  font-weight: bold;
+}
+
+/* Clear Completed Button */
+.clear-completed-btn {
+  padding: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--retro-error);
+  color: #FFFFFF;
+  border: 2px solid var(--retro-border);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px rgba(45, 27, 0, 0.2);
+  align-self: center;
+}
+
+.clear-completed-btn:hover {
+  background-color: #FF5555;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0px rgba(45, 27, 0, 0.3);
+}
+
+.clear-completed-btn:active {
+  transform: translateY(0);
+  box-shadow: 1px 1px 0px rgba(45, 27, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .todo-footer {
+    padding: 14px 16px;
+  }
+
+  .task-counts {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .count-item strong {
+    font-size: 14px;
+  }
+
+  .clear-completed-btn {
+    width: 100%;
+    font-size: 13px;
+  }
+}

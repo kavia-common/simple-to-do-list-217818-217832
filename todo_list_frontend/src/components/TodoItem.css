@@ -1,0 +1,125 @@
+/* TodoItem Component Styles */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: #FFFFFF;
+  border: 2px solid var(--retro-border);
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  box-shadow: 4px 4px 0px rgba(45, 27, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.todo-item.completed {
+  background-color: #F0F0F0;
+  opacity: 0.7;
+}
+
+/* Checkbox */
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: var(--retro-burnt-orange);
+}
+
+/* Task Title */
+.todo-title {
+  flex: 1;
+  font-size: 16px;
+  color: var(--retro-dark-brown);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  color: var(--retro-completed);
+}
+
+/* Edit Input */
+.todo-edit-input {
+  flex: 1;
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  background-color: #FFFACD;
+  border: 2px solid var(--retro-burnt-orange);
+  color: var(--retro-dark-brown);
+  outline: none;
+}
+
+/* Action Buttons */
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.todo-action-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--retro-gray);
+  color: #FFFFFF;
+  border: 2px solid var(--retro-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-action-btn:hover {
+  transform: scale(1.1);
+}
+
+.todo-action-btn:active {
+  transform: scale(0.95);
+}
+
+.edit-btn {
+  background-color: var(--retro-amber);
+}
+
+.edit-btn:hover {
+  background-color: #FFD700;
+}
+
+.delete-btn {
+  background-color: var(--retro-error);
+}
+
+.delete-btn:hover {
+  background-color: #FF5555;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .todo-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .todo-title {
+    font-size: 14px;
+  }
+
+  .todo-action-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .todo-edit-input {
+    font-size: 14px;
+  }
+}
